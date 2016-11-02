@@ -7,7 +7,6 @@ package fourthline.mmlTools;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -26,7 +25,7 @@ public final class MMLEventList implements Serializable, Cloneable {
 	private List<MMLTempoEvent>  tempoList;
 
 	/**
-	 *
+	 * 
 	 * @param mml
 	 */
 	public MMLEventList(String mml) {
@@ -197,27 +196,6 @@ public final class MMLEventList implements Serializable, Cloneable {
 	public void deleteMMLEvent(MMLEvent deleteItem) {
 		noteList.remove(deleteItem);
 	}
-
-	/**
-     * 指定の範囲内のMMLEventを削除する。
-	 * @param tickStart 削除対象に含む
-	 * @param tickEnd  削除対象に含まない
-     */
-	public void deleteMMLEvent(long tickStart, long tickEnd) {
-		Iterator<MMLNoteEvent> itr =noteList.iterator();
-		while(itr.hasNext()){
-			MMLNoteEvent note = itr.next();
-			long tick = note.getTickOffset();
-			if (tickStart <= tick) {
-				if (tick < tickEnd) {
-					itr.remove();
-				}else{
-					break;
-				}
-			}
-		}
-	}
-
 
 	/**
 	 * 指定されたノートに音量コマンドを設定する.

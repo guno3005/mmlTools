@@ -17,7 +17,7 @@
 	<property name="app.vendor" value="fourthline" />
 	<property name="app.id" value="MabiIcco" />
 	<property name="app.name" value="MabiIcco" />
-	<property name="app.version" value="1.0-alpha27_Kai0.1" />
+	<property name="app.version" value="1.0-alpha27" />
 	<property name="app.main-class" value="fourthline.mabiicco.MabiIcco" />
 	<property name="app.preloader-class" value="fourthline.mabiicco.preloader.MabiIccoPreloader" />
 	<property name="splash.image" value="img/title.png" />
@@ -58,7 +58,7 @@
 	<target name="jfx-package"
 		description="javafxpackage"
 		depends="compile,resources">
-
+		
 		<taskdef resource="com/sun/javafx/tools/ant/antlib.xml"
 			uri="javafx:com.sun.javafx.tools.ant"
 			classpath="${javafx.tools.ant.jar}" />
